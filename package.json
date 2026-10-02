@@ -1,0 +1,29 @@
+{
+  "name": "video-tools-mcp",
+  "version": "0.1.0",
+  "description": "An MCP server that gives AI agents local video tools: metadata, shot detection, frame extraction, and keyframe checks. Runs ffmpeg on your machine. No API key.",
+  "license": "MIT",
+  "author": "Video Context (https://videocontextapi.com)",
+  "homepage": "https://github.com/video-context/video-tools-mcp#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/video-context/video-tools-mcp.git" },
+  "bugs": "https://github.com/video-context/video-tools-mcp/issues",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "video", "ffmpeg", "ffprobe", "shot-detection", "scene-detection", "keyframes", "frames", "claude", "ai-agents", "video-understanding"],
+  "type": "module",
+  "bin": { "video-tools-mcp": "./dist/index.js" },
+  "main": "./dist/tools.js",
+  "files": ["dist"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "tsc && node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "~6.0.3"
+  }
+}
